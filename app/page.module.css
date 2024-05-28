@@ -7,6 +7,10 @@
   min-height: 100vh;
 }
 
+.service{
+  background-color: rgb(255, 244, 228);
+}
+
 .description {
   display: inherit;
   justify-content: inherit;

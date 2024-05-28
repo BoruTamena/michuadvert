@@ -1,0 +1,36 @@
+.userbox{
+    border-radius: 30px;
+    background-color: rgb(161, 161, 206);
+    margin-left: 40px;
+}   
+
+.footerbg{
+
+    background-color: blanchedalmond;
+
+    display: block;
+    margin-top: "100px";
+   
+}
+.ctxt{
+    
+    font-weight:bolder;
+    color:rgb(255, 255, 23)
+
+}
+.primarybtn{
+    box-shadow: none;
+}
+.navitem{
+    color: black;
+}
+.navitem:link{
+    text-decoration: none;
+
+}
+.navitem:hover{
+    color:green
+}
+
+
+

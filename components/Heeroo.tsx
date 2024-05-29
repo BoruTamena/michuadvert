@@ -1,4 +1,4 @@
-import { Button, Container, Grid, Typography } from "@mui/material";
+import { Button, Container, Grid, Hidden, Typography } from "@mui/material";
 
 import styles from "./style.module.css"
 import Image from "next/image";
@@ -7,12 +7,12 @@ type Props = {}
 
 const Heeroo = (props: Props) => {
   return (
-    <div>
+    <div style={{marginTop:"30px"}}>
         <Container>
              <Grid container spacing={2}>
-                <Grid item md={6}>
+                <Grid item md={6}  xs={12} sm={12}>
 
-                    <Typography variant="h1" textTransform={"capitalize"} mt={4}>
+                    <Typography variant={"h1"} fontWeight={"bold"}  textTransform={"capitalize"} mt={4}>
                          Yaadotaa gara Hojitti!!!
                     </Typography>
                       
@@ -22,7 +22,7 @@ const Heeroo = (props: Props) => {
                      <Button
                       className={styles.primarybtn} 
                       variant="contained" 
-                      sx={{boxShadow:"none",borderRadius:"40px",mt:2,width:"50%" }}
+                      sx={{boxShadow:"none",borderRadius:"40px",mt:3,width:"50%" }}
                       >
                         <Typography 
                         textTransform={"capitalize"} 
@@ -30,8 +30,8 @@ const Heeroo = (props: Props) => {
                        
                      </Button>
                 </Grid>
-
-                <Grid item md={6}>
+              <Hidden mdDown>
+              <Grid item md={6} xs={12} sm={12}>
                     <Image
                      style={{marginTop:5}}
                      width={500}
@@ -40,6 +40,9 @@ const Heeroo = (props: Props) => {
                      alt=""
                     />
                 </Grid>
+
+              </Hidden>
+                
              </Grid>
         </Container>
     </div>

@@ -6,10 +6,13 @@
 
 .footerbg{
 
-    background-color: blanchedalmond;
+    background-color: rgb(165, 224, 153);
+
+    position: relative;
+    bottom: 0;
 
     display: block;
-    margin-top: "100px";
+  
    
 }
 .ctxt{

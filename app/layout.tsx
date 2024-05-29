@@ -22,16 +22,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       
-      <body >
+      <body>
         <AppRouterCacheProvider>
           <ThemeProvider theme={theme}>
             <Nav/>
             
                  {children}
-            
           
-
-            {/* <Footer/> */}
+            <br/> <br/>
+            <br/> <br/>
+            <Footer/>
           </ThemeProvider>
           
         </AppRouterCacheProvider>

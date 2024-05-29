@@ -16,9 +16,9 @@ const service =[""]
 
             <Grid item md={4}>
                <Typography variant="h6">Contact </Typography>
-               <Box p={1}>
+               <Box >
                 {
-                contact.map((item,index)=><Typography key={index}>{item}</Typography>)
+                contact.map((item,index)=><Typography p={1} key={index}>{item}</Typography>)
                 }
                </Box>
                

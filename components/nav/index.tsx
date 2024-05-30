@@ -1,13 +1,27 @@
-import { AppBar, Box, Container, Hidden, Stack, Toolbar, Typography } from "@mui/material";
+"use client"
+import { AppBar, Box, Container, Hidden, Menu, MenuItem, Stack, Toolbar, Typography } from "@mui/material";
 import Link from "next/link";
 import User from "./User";
 import styles from "../style.module.css"
 import Image from "next/image";
+import { ArrowDropDown } from "@mui/icons-material";
+import React from "react";
+import { useRouter } from "next/navigation";
 
 type Props = {}
 
 const Nav = (props: Props) => {
 
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+ 
+  const router =useRouter()
     
   return (
     <div>
@@ -21,6 +35,8 @@ const Nav = (props: Props) => {
                    height={50}
                    src="/image/logo.jpg"
                    alt=""
+                   onClick={()=>{router.push("/")}}
+                   style={{cursor:"pointer"}}
                   />
                 </Box>
                 <Hidden lgDown>
@@ -40,17 +56,41 @@ const Nav = (props: Props) => {
                   component={Link} href="/blog"  
                   textTransform={"capitalize"}>blog</Typography>
 
+                  <Stack direction={"row"} 
+                    spacing={1} 
+                    alignContent={"center"} 
+                    alignItems={"center"}>
+
                   <Typography className={styles.navitem} 
-                   component={Link} href="/#service" textTransform={"capitalize"}>service</Typography>
-               
-               
+                  //  component={Link} href="/#service" 
+                   textTransform={"capitalize"}
+                  
+                   onClick={handleClick}
+                   
+                   >service</Typography>
+
+                  <ArrowDropDown/>
+                  </Stack>
                 </Stack>
                 <User/>
                 </Hidden>
                
             </Toolbar>
             </Container>
+            <Menu
+        id="basic-menu"
+        anchorEl={anchorEl}
+        open={open}
+        onClose={handleClose}
+      >
+        <MenuItem onClick={handleClose}>Logo</MenuItem>
+        <MenuItem onClick={handleClose}>Banner</MenuItem>
+        <MenuItem onClick={handleClose}>Cards</MenuItem>
+      </Menu>
         </AppBar>
+
+
+       
     </div>
   )
 };

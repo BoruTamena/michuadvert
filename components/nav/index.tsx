@@ -15,7 +15,7 @@ const Nav = (props: Props) => {
           <Container>
             <Toolbar >
               
-                <Box sx={{paddingRight:"40px"}}>
+                <Box sx={{marginRight:"40px"}}>
                   <Image
                    width={50}
                    height={50}
@@ -29,12 +29,21 @@ const Nav = (props: Props) => {
                   className={styles.navitem} 
                   component={Link} href="/" 
                    textTransform={"capitalize"}>home</Typography>
+
+                  <Typography 
+                  className={styles.navitem}  
+                  component={Link} href="/about"  
+                  textTransform={"capitalize"}>about</Typography>
+
                   <Typography 
                   className={styles.navitem}  
                   component={Link} href="/blog"  
                   textTransform={"capitalize"}>blog</Typography>
+
                   <Typography className={styles.navitem} 
                    component={Link} href="/#service" textTransform={"capitalize"}>service</Typography>
+               
+               
                 </Stack>
                 <User/>
                 </Hidden>

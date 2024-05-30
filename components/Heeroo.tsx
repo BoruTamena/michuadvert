@@ -12,11 +12,22 @@ const Heeroo = (props: Props) => {
              <Grid container spacing={2}>
                 <Grid item md={6}  xs={12} sm={12}>
 
-                    <Typography variant={"h1"} fontWeight={"bold"}  textTransform={"capitalize"} mt={4}>
-                         Yaadotaa gara Hojitti!!!
+                    <Typography variant="h2" 
+                     fontWeight={"bold"} 
+                     textTransform={"capitalize"} 
+                     mt={5}
+                     lineHeight={1.5}
+                     >
+                        Yaadotaa gara Hojitti!!!
                     </Typography>
                       
-                    <Typography variant="h3" className={styles.ctxt} > Michu wajjiin</Typography>
+                    <Typography variant="h3"
+                     className={styles.ctxt} 
+                     lineHeight={1.5}
+                     
+                     > 
+                     Michu wajjiin
+                     </Typography>
 
 
                      <Button

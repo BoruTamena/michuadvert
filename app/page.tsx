@@ -43,16 +43,23 @@ export default function Home() {
       <Container>
 
         <Grid container spacing={5}>
-          <Grid item md={4}>
+          <Grid item md={4} >
 
             <Typography 
             variant="h2" 
-            fontWeight={"bolder"}
-             color="blue">Gammachuun Keenya Maamillaa Keenyaa !</Typography>
+             fontWeight={"bolder"}
+             textAlign="justify"
+            
+             color="blue"
+             alignSelf={"center"}
+             >
+              Gammachuun Keenya Maamillaa Keenyaa !
+              
+              </Typography>
 
           </Grid>
 
-          <Grid item md={6}>
+          <Grid item md={8} >
             <Box  component="div"
              sx={{display:"flex",
              flexDirection:"column",
@@ -62,8 +69,9 @@ export default function Home() {
              maxHeight:"450px",
              overflow:"scroll"}} >
             <Testimony/>
-            
             <Testimony/>
+            <Testimony/>
+
             </Box>
 
            

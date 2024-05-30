@@ -4,14 +4,11 @@ import { ContactEmergency, LocationOff, LocationOn, Mail, Phone } from "@mui/ico
 import { Box, Button, Container, Grid, Stack, Typography } from "@mui/material";
 
 interface Props {
-
     id:number,
     title:string ,
     description:string,
     cover:string,
-    img:string []
-
-
+    img:string [] 
 }
 
 const  page = async({params}:{params:{id:string}}) => {
@@ -24,7 +21,7 @@ const  page = async({params}:{params:{id:string}}) => {
   return (
     <Container >
 
-    <Grid container spacing={3}>
+    <Grid container spacing={3} mt={4}>
 
       <Grid item md={6}>
         <ImageSlider/>

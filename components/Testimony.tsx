@@ -5,9 +5,9 @@ type Props = {}
 
 const Testimony = (props: Props) => {
   return (
-    <div style={{display:"block",width:"100%"}}>
+    <div style={{display:"block",width:"100%",height:"100%"}}>
 
-        <Stack direction={"row"} spacing={2} mt={5}>
+        <Stack direction={"row"} spacing={2} mt={5} >
               <Box pl={9} >
                   <Image
                     width={100}
@@ -20,14 +20,14 @@ const Testimony = (props: Props) => {
                 <Typography>Boru Tamane Yadeta </Typography>
                 <Typography variant="caption" pl={1}>Author of .....</Typography>
               </Box>
-            </Stack>
+          </Stack>
 
-              <Typography 
-                pl={9} 
-                textAlign={"justify"}>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo laboriosam laborum, totam perspiciatis cumque inventore sit autem accusamus tempore. 
-                    Eos repudiandae at consequatur, tempore eum dolorum nostrum earum eaque et.
-              </Typography>
+          <Typography 
+            pl={9} 
+            textAlign={"justify"}>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo laboriosam laborum, totam perspiciatis cumque inventore sit autem accusamus tempore. 
+                Eos repudiandae at consequatur, tempore eum dolorum nostrum earum eaque et.
+          </Typography>
 
     </div>
   )

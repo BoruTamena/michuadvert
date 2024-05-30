@@ -29,8 +29,8 @@ export default function RootLayout({
             
                  {children}
           
-            <br/> <br/>
-            <br/> <br/>
+            {/* <br/> <br/>
+            <br/> <br/> */}
             <Footer/>
           </ThemeProvider>
           

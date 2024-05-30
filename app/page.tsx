@@ -4,14 +4,26 @@ import { Box, Container, Grid, Stack, Typography } from "@mui/material";
 import Heeroo from "@/components/Heeroo";
 import CardComponent from "@/components/CardComponent";
 import Testimony from "@/components/Testimony";
+import AboutDescription from "@/components/AboutDescription";
+import AboutOption from "@/components/AboutOption";
 
 export default function Home() {
   return (
     <main>
-    <Heeroo/>  
-    <Box id="service" className={styles.service}  mt={5} p={2}>
+    <Heeroo/> 
+
+      <Box mt={5} p={2}  className={styles.about}>
+        <Container>
+        <Typography fontWeight={"bold"}  variant="h5" textAlign={"center"} mb={5} p={5}>About Us</Typography>
+           <AboutDescription/>
+           <AboutOption/>
+        </Container>
+          
+        </Box>
+ 
+    <Box id="service" p={2}>
      <Container >
-      <Typography fontWeight={"bold"}  variant="h5" textAlign={"center"} mb={5} mt={5}>Tajajila Keenyaa </Typography>
+      <Typography fontWeight={"bold"}  variant="h5" textAlign={"center"} mb={5} p={5}>Tajajila Keenyaa </Typography>
       <Grid container spacing ={1}>
         <Grid item md={3 } xs={12} sm={12}>
           <CardComponent/>
@@ -32,12 +44,12 @@ export default function Home() {
     </Box>
 
 
-    <Box id ="testimony" m={5}>
+    <Box id ="testimony" className={styles.service}>
 
       <Typography fontWeight={"bold"}  
       variant="h5" textAlign={"center"}
        mb={5}
-        mt={5}>Our Success Story</Typography>
+        p={5}>Our Success Story</Typography>
 
 
       <Container>
@@ -79,6 +91,9 @@ export default function Home() {
         </Grid>
 
       </Container>
+      <br />
+          <br />
+          <br />
 
     </Box>
 

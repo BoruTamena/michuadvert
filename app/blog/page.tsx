@@ -1,28 +1,35 @@
+import BlogCard from "@/components/BlogCard";
 import BlogContent from "@/components/BlogContent";
-import { Box, Container, Divider, Typography } from "@mui/material";
+import { Box, Card, CardContent, Container, Divider, Grid, Typography } from "@mui/material";
 
 type Props = {}
 
 const page = (props: Props) => {
   return (
-    <div>
+    <div style={{marginTop:10}}>
         <Container>
-            <Typography 
-            variant="h3" 
-            textTransform={"capitalize"}
-            textAlign={"center"}
-            fontWeight={"bolder"}
-            mt={3}
-            >
-            Titile of the Blog</Typography>
 
-            <Divider/>
+          <Typography variant="h5" fontWeight={"bold"} mb={2} mt={4}> Our Blogs</Typography>
+           
+           <Grid container spacing={2}>
 
-            <Box mt={3}>
-               <BlogContent/>
+            <Grid item md={4}>
+              <BlogCard/>
+            </Grid>
 
-            </Box>
+            <Grid item md={4}>
+              <BlogCard/>
+            </Grid>
+
+            <Grid item md={4}>
+              <BlogCard/>
+            </Grid>
+
+           </Grid>
         </Container>
+        <br />
+        <br />
+        <br />
     </div>
   )
 };

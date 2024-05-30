@@ -49,9 +49,9 @@ const page = (props: Props) => {
         </Box>
     
       </Container>
-      
-
-      
+      <br />
+      <br />
+      <br />
     </div>
   )
 };

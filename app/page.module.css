@@ -11,6 +11,10 @@
   background-color: rgb(255, 244, 228);
 }
 
+.about{
+  background-color: rgb(243, 245, 248);
+}
+
 .description {
   display: inherit;
   justify-content: inherit;

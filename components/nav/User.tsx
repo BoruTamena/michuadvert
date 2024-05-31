@@ -7,8 +7,8 @@ const User = (props: Props) => {
   return (
     <div>
         <Stack className={styles.userbox} spacing={2} direction={"row"} justifyContent={"center"} alignItems={"center"} useFlexGap>
-            <Avatar>B</Avatar>
-            <MoreVert/>
+            <Avatar sx={{ background: "brown" }} variant="rounded">B</Avatar>
+            {/* <MoreVert/> */}
         </Stack>
     </div>
   )

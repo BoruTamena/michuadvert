@@ -12,9 +12,9 @@ type Props = {}
 
 const Nav = (props: Props) => {
 
-  const [anchorEl, setAnchorEl] = React.useState(null);
+  const [anchorEl, setAnchorEl] = React.useState<null |HTMLElement>(null);
   const open = Boolean(anchorEl);
-  const handleClick = (event) => {
+  const handleClick = (event:React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget);
   };
   const handleClose = () => {
@@ -29,7 +29,7 @@ const Nav = (props: Props) => {
           <Container>
             <Toolbar >
               
-                <Box sx={{marginRight:"40px"}}>
+                <Box sx={{flex:1}} >
                   <Image
                    width={50}
                    height={50}
@@ -40,7 +40,7 @@ const Nav = (props: Props) => {
                   />
                 </Box>
                 <Hidden lgDown>
-                <Stack direction={"row"} spacing={4} useFlexGap sx={{flex:1}}>
+                <Stack direction={"row"} spacing={4} useFlexGap>
                   <Typography 
                   className={styles.navitem} 
                   component={Link} href="/" 

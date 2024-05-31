@@ -11,7 +11,6 @@ export default function Home() {
   return (
     <main>
     <Heeroo/> 
-
       <Box mt={5} p={2}  className={styles.about}>
         <Container>
         <Typography fontWeight={"bold"}  variant="h5" textAlign={"center"} mb={5} p={5}>About Us</Typography>
@@ -91,14 +90,10 @@ export default function Home() {
         </Grid>
 
       </Container>
-      <br />
-          <br />
-          <br />
-
+     
     </Box>
 
-    <br/>
-    <br/>
+    
     
     </main>
   );  
